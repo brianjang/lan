@@ -5,7 +5,8 @@ var authCheck = require('../auth/basic');
 module.exports = function (app) {
   'use strict';
   return function (req, res) {
-    var deviceRex = /^\/(.*)\/(.*)\?/;
+    // var deviceRex = /^\/(.*)\/(.*)\?/;
+    var deviceRex = /^\/(.*)\?/;
 
     var other = function () {
       res.code = '4.05';
